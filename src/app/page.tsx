@@ -1,31 +1,8 @@
-import Head from 'next/head';
 import Image from 'next/image';
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Clément Joly | Professional Soccer Player</title>
-        <meta name="description" content="Official website of Clément Joly, professional soccer player. Discover his journey, achievements, and latest news." />
-        <meta name="keywords" content="Clément Joly, soccer, football, professional player" />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.clementjoly.com/" />
-        <meta property="og:title" content="Clément Joly | Professional Soccer Player" />
-        <meta property="og:description" content="Discover the journey and achievements of Clément Joly, professional soccer player." />
-        <meta property="og:image" content="https://www.clementjoly.com/assets/image/clement.jpg" />
-
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.clementjoly.com/" />
-        <meta property="twitter:title" content="Clément Joly | Professional Soccer Player" />
-        <meta property="twitter:description" content="Discover the journey and achievements of Clément Joly, professional soccer player." />
-        <meta property="twitter:image" content="https://www.clementjoly.com/assets/image/clement.jpg" />
-
-        <link rel="canonical" href="https://www.clementjoly.com/" />
-      </Head>
-
       <div className="flex min-h-screen items-center justify-center fixed bg-clement bg-cover bg-center w-full h-full flex-col">
         <div className='absolute top-16 flex flex-col items-center justify-center z-50'>
           <Image src="/assets/img/d2s-logo.png" alt="D2S" width={50} height={50} />
