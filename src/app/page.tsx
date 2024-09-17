@@ -1,101 +1,68 @@
-import Image from "next/image";
+import Head from 'next/head';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <Head>
+        <title>Clément Joly | Professional Soccer Player</title>
+        <meta name="description" content="Official website of Clément Joly, professional soccer player. Discover his journey, achievements, and latest news." />
+        <meta name="keywords" content="Clément Joly, soccer, football, professional player" />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.clementjoly.com/" />
+        <meta property="og:title" content="Clément Joly | Professional Soccer Player" />
+        <meta property="og:description" content="Discover the journey and achievements of Clément Joly, professional soccer player." />
+        <meta property="og:image" content="https://www.clementjoly.com/assets/image/clement.jpg" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.clementjoly.com/" />
+        <meta property="twitter:title" content="Clément Joly | Professional Soccer Player" />
+        <meta property="twitter:description" content="Discover the journey and achievements of Clément Joly, professional soccer player." />
+        <meta property="twitter:image" content="https://www.clementjoly.com/assets/image/clement.jpg" />
+
+        <link rel="canonical" href="https://www.clementjoly.com/" />
+      </Head>
+
+      <div className="flex min-h-screen items-center justify-center fixed bg-clement bg-cover bg-center w-full h-full flex-col">
+        <div className='absolute top-16 flex flex-col items-center justify-center z-50'>
+          <Image src="/assets/img/d2s-logo.png" alt="D2S" width={50} height={50} />
+          <p className='text-white text-xs uppercase tracking-wider mt-4 font-bold text-center'>
+            Awarded Best Player of FC D2S 4 times in a row <br />
+            2021, 2022, 2023, 2024
+          </p>
+
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+        <div className="relative z-10 text-center p-10 rounded-lg">
+          <h1 className="text-6xl font-bold text-white uppercase tracking-wider mb-4">
+            Clément Joly
+          </h1>
+          <p className="text-xl text-gray-200 font-light mb-8">
+            🔥 Professional Soccer Player 🔥
+          </p>
+          <div className="flex md:flex-row flex-col justify-center gap-4">
+            <a href='https://www.youtube.com/watch?v=mmeLCAP74KA' target='_blank' className="px-6 py-3 bg-yellow-500 text-black font-semibold rounded-full hover:bg-yellow-400 transition duration-300 w-full md:w-auto">
+              Découvrir mon parcours
+            </a>
+            <a href='https://youtube.com/shorts/WP3RaEtzeVA' target='_blank' className="px-6 py-3 bg-red-600 text-white font-semibold rounded-full hover:bg-red-500 transition duration-300 w-full md:w-auto">
+              Voir mes meilleurs moments
+            </a>
+          </div>
+        </div>
+
+
+        <div className='absolute bottom-16 flex flex-col items-center'>
+          <p className='text-white text-sm uppercase tracking-wider mb-4 font-bold'>SOUTENU PAR</p>
+          <div className="flex justify-center items-center space-x-8">
+            <Image src="/assets/img/nike-logo.png" alt="Nike" width={50} height={50} />
+            <Image src="/assets/img/adidas-logo.png" alt="Adidas" width={50} height={50} />
+            <Image src="/assets/img/puma-logo.png" alt="Puma" width={50} height={50} />
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
